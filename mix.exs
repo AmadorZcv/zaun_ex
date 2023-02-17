@@ -7,6 +7,8 @@ defmodule Zaun.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
+      description: "Riot League of Legends API wrapper",
+      package: package(),
       deps: deps()
     ]
   end
@@ -16,6 +18,15 @@ defmodule Zaun.MixProject do
     [
       extra_applications: [:logger],
       mod: {Zaun.Application, []}
+    ]
+  end
+
+  defp package() do
+    [
+      # This option is only needed when you don't want to use the OTP application name
+      name: "zaun_ex",
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/AmadorZcv/zaun_ex"}
     ]
   end
 
