@@ -33,7 +33,10 @@ defmodule Zaun.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.27", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.27", only: :dev, runtime: false},
+      {:tesla, "~> 1.4"},
+      {:hackney, "~> 1.17"},
+      {:jason, ">= 1.0.0"}
     ]
   end
 end

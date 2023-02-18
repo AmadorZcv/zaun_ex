@@ -1,4 +1,6 @@
 defmodule Zaun do
+  alias Zaun.ApiClient
+
   @moduledoc """
   Documentation for `Zaun`.
   """
@@ -12,6 +14,11 @@ defmodule Zaun do
       :world
 
   """
+
+  def get_summoner_by_name(summoner_name, config \\ []) do
+    ApiClient.summoner_by_name(summoner_name, config)
+  end
+
   def hello do
     :world
   end
